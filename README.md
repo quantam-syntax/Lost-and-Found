@@ -43,11 +43,7 @@ npx serve .
 
 Then open **http://localhost:8000**
 
-> You must serve over HTTP (not open as file://) because ES modules require it.
-
----
-
-## 💾 How Data is Stored
+##  How Data is Stored
 
 - User accounts → localStorage (JSON)
 - Posts         → localStorage (JSON arrays, one per type)
@@ -59,7 +55,7 @@ Clearing browser storage resets everything.
 
 ---
 
-## ✨ Features
+##  Features
 
 - User authentication — sign up, login, logout (all local, no server)
 - Post lost/found items with photo, category, location, date
@@ -72,9 +68,7 @@ Clearing browser storage resets everything.
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - Frontend: Vanilla HTML5, CSS3, Tailwind CSS (CDN)
 - Storage: Browser localStorage / sessionStorage
-- Fonts: Orbitron + Outfit via Google Fonts (CDN)
-- No Firebase, no backend, no build step required

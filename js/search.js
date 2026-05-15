@@ -39,11 +39,6 @@ export function itemCard(item, type) {
           ${item.location}
         </p>` : ""}
         <div class="text-xs text-slate-600 mb-3">${formatDate(item.createdAt)}</div>
-        <a href="post.html?type=${type}&id=${item.id}"
-           class="w-full py-2.5 rounded-xl text-center text-xs font-semibold transition-all
-                  border border-blue-500/30 text-blue-400 hover:bg-blue-500/10">
-          View Details
-        </a>
       </div>
     </div>
   `;
