@@ -46,12 +46,12 @@ export function showToast(message, type = "info") {
 
 // ── Global Spinner ────────────────────────────────────────────
 export function showSpinner() {
-  const spinner = document.getElementById("globalSpinner");
-  if (spinner) spinner.style.display = "flex";
+  const s = document.getElementById("globalSpinner");
+  if (s) s.style.display = "flex";
 }
 export function hideSpinner() {
-  const spinner = document.getElementById("globalSpinner");
-  if (spinner) spinner.style.display = "none";
+  const s = document.getElementById("globalSpinner");
+  if (s) s.style.display = "none";
 }
 
 // ── Confirm Dialog ────────────────────────────────────────────

@@ -111,7 +111,7 @@ function dashCard(item, type) {
                    hover:bg-blue-500/10 transition-all text-center">
             Edit
           </a>
-          <button data-delete="${item.id}" data-delete-type="${type}"
+          <button data-delete="${item.id}" data-delete-type="${type}" data-delete-path="${item.imagePath || ""}"
             class="flex-1 py-2 rounded-xl border border-red-500/30 text-red-400 text-xs font-semibold
                    hover:bg-red-500/10 transition-all">
             Delete
@@ -138,7 +138,7 @@ function attachCardActions(type) {
   grid.querySelectorAll("[data-delete]").forEach(btn => {
     btn.addEventListener("click", () => {
       showConfirm("Delete Post", "This action cannot be undone. Are you sure?", async () => {
-        const ok = await deletePost(btn.dataset.deleteType, btn.dataset.delete);
+        const ok = await deletePost(btn.dataset.deleteType, btn.dataset.delete, btn.dataset.deletePath);
         if (ok) {
           userPosts[btn.dataset.deleteType] = userPosts[btn.dataset.deleteType].filter(i => i.id !== btn.dataset.delete);
           renderTab(activeTab);

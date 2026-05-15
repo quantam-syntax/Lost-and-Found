@@ -15,7 +15,7 @@
   <div class="bg-orb bg-orb-3"></div>
 
   <!-- Global Spinner -->
-s  <div id="globalSpinner" style="display:none">
+  <div id="globalSpinner" style="display:none;">
     <div class="spinner-ring"></div>
   </div>
 
@@ -278,6 +278,7 @@ s  <div id="globalSpinner" style="display:none">
   </footer>
 
   <script type="module">
+    import { auth }                          from "./js/firebase.js";
     import { logout, watchAuth }             from "./js/auth.js";
     import { fetchRecentPosts }              from "./js/posts.js";
     import { itemCard, renderSkeletons }     from "./js/search.js";
